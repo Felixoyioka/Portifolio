@@ -1,3 +1,69 @@
-body{
-    background-color: blue;
-}
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	text-decoration: none;
+	outline: none;
+  }
+  html{
+	overflow-x: hidden;
+  }
+  body{
+	background-color: #12192c;
+	color: white;
+  }
+  .header{
+	position: fixed;
+	background: transparent;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem 9%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+  }
+  header.sticky{
+	padding: 10px 9%;
+	background: black;
+	border-bottom: 1px solid #0e1630;
+	transition: .3s;
+  }
+  .logo{
+	font-size: 25px;
+	color: white;
+	font-weight: 600;
+	pointer-events: none;
+	text-decoration: none;
+	margin-left: 20px;
+	opacity: 0;
+	animation: slideTop 1s ease forwards;
+  }
+  #menu-icon{
+	font-size: 36px;
+	color: white;
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+  }
+  .navbar a{
+	display: inline-block;
+	font-size: 18px;
+	color: white;
+	margin-left: 35px;
+	font-weight: 500;
+	text-decoration: none;
+	animation: slideTop .5s ease forwards;
+	animation-delay: calc(.2s * var(--i));
+  
+  }
+  .navbar a:hover,
+  .navbar a.active{
+	background: linear-gradient(45deg, #f06, #3cf);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+  }
+  
